@@ -432,8 +432,7 @@ EnhancedVolcano <- function(
 
       # specify the colour and shape with the supplied encoding
       scale_color_manual(values = colCustom) +
-      scale_shape_manual(values = shapeCustom) +
-      element_text(family = "serif")
+      scale_shape_manual(values = shapeCustom) 
       
 
   # 2, only colCustom is activated and 'shape' has just a single value
@@ -470,7 +469,8 @@ EnhancedVolcano <- function(
 
       # 'shape' is not included as aes. Specifying guide = TRUE
       # here will result in legends merging
-      scale_shape_manual(guide = TRUE)
+      scale_shape_manual(guide = TRUE)+
+      element_text(family = "serif")
 
   # 3, only colCustom is activated and 'shape' has 4 values
   } else if (!is.null(colCustom) & is.null(shapeCustom) & length(shape) == 4) {
@@ -519,7 +519,8 @@ EnhancedVolcano <- function(
           P = legendLabels[3],
           FC_P = legendLabels[4]),
         guide = TRUE,
-        drop = legendDropLevels)
+        drop = legendDropLevels)+
+        element_text(family = "serif")
 
   # 4, only shapeCustom is activated
   } else if (is.null(colCustom) & !is.null(shapeCustom)) {
@@ -569,7 +570,8 @@ EnhancedVolcano <- function(
           drop = legendDropLevels) +
 
         # specify the shape with the supplied encoding
-        scale_shape_manual(values = shapeCustom)
+        scale_shape_manual(values = shapeCustom)+
+        element_text(family = "serif")
 
     } else {
 
@@ -603,7 +605,8 @@ EnhancedVolcano <- function(
           labels = colGradientLabels)
 
         # specify the shape with the supplied encoding
-        scale_shape_manual(values = shapeCustom)
+        scale_shape_manual(values = shapeCustom)+
+        element_text(family = "serif")
 
     }
 
@@ -642,7 +645,8 @@ EnhancedVolcano <- function(
             FC = legendLabels[2],
             P = legendLabels[3],
             FC_P = legendLabels[4]),
-          drop = legendDropLevels)
+          drop = legendDropLevels)+
+          element_text(family = "serif")
 
     } else {
 
@@ -660,7 +664,8 @@ EnhancedVolcano <- function(
           high = colGradient[2],
           limits = colGradientLimits,
           breaks = colGradientBreaks,
-          labels = colGradientLabels)
+          labels = colGradientLabels)+
+        element_text(family = "serif")
     }
 
   # 6, both colCustom and shapeCustom are null;
@@ -711,7 +716,8 @@ EnhancedVolcano <- function(
             P = shape[3],
             FC_P = shape[4]),
           guide = FALSE,
-          drop = legendDropLevels)
+          drop = legendDropLevels) +
+        element_text(family = "serif")
 
     } else {
 
@@ -739,7 +745,8 @@ EnhancedVolcano <- function(
             P = shape[3],
             FC_P = shape[4]),
           guide = FALSE,
-          drop = legendDropLevels)
+          drop = legendDropLevels) +
+        element_text(family = "serif")
 
     }
   }
