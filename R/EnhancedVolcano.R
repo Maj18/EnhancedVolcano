@@ -852,6 +852,7 @@ EnhancedVolcano <- function(
       }
 
       plot <- plot + geom_text_repel(
+        family="serif",
         data = subset(toptable,
           !is.na(toptable[['lab']])),
         aes(label = subset(toptable,
@@ -873,6 +874,7 @@ EnhancedVolcano <- function(
     } else if (!drawConnectors && !is.null(selectLab)) {
 
       plot <- plot + geom_text(
+        family="serif",
         data = subset(toptable,
           !is.na(toptable[['lab']])),
         aes(
@@ -888,6 +890,7 @@ EnhancedVolcano <- function(
     } else if (!drawConnectors && is.null(selectLab)) {
 
       plot <- plot + geom_text(
+        family="serif",
         data = subset(toptable,
           toptable[[y]] < pCutoff &
             abs(toptable[[x]]) > FCcutoff),
@@ -917,6 +920,7 @@ EnhancedVolcano <- function(
       }
 
       plot <- plot + geom_label_repel(
+        family="serif",
         data = subset(toptable,
           toptable[[y]] < pCutoff &
             abs(toptable[[x]]) > FCcutoff),
@@ -947,6 +951,7 @@ EnhancedVolcano <- function(
       }
 
       plot <- plot + geom_label_repel(
+        family="serif",
         data = subset(toptable,
           !is.na(toptable[['lab']])),
         aes(label = subset(toptable,
@@ -968,6 +973,7 @@ EnhancedVolcano <- function(
     } else if (!drawConnectors && !is.null(selectLab)) {
 
       plot <- plot + geom_label(
+        family="serif",
         data = subset(toptable,
           !is.na(toptable[["lab"]])),
         aes(
@@ -982,6 +988,7 @@ EnhancedVolcano <- function(
     } else if (!drawConnectors && is.null(selectLab)) {
 
       plot <- plot + geom_label(
+        family="serif",
         data = subset(toptable,
           toptable[[y]] < pCutoff &
             abs(toptable[[x]]) > FCcutoff),
