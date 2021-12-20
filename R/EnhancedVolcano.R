@@ -432,7 +432,9 @@ EnhancedVolcano <- function(
 
       # specify the colour and shape with the supplied encoding
       scale_color_manual(values = colCustom) +
-      scale_shape_manual(values = shapeCustom)
+      scale_shape_manual(values = shapeCustom) +
+      element_text(family = "serif")
+      
 
   # 2, only colCustom is activated and 'shape' has just a single value
   } else if (!is.null(colCustom) & is.null(shapeCustom) & length(shape) == 1) {
