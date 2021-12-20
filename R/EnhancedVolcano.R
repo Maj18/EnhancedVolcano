@@ -821,7 +821,7 @@ EnhancedVolcano <- function(
       }
 
       plot <- plot + geom_text_repel(
-        famil="serif",
+        family="serif",
         data = subset(toptable,
           toptable[[y]] < pCutoff &
             abs(toptable[[x]]) > FCcutoff),
