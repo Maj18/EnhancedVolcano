@@ -357,28 +357,34 @@ EnhancedVolcano <- function(
         angle = 0,
         size = titleLabSize,
         face = 'bold',
+        family = "serif",
         vjust = 1),
       plot.subtitle = element_text(
         angle = 0,
         size = subtitleLabSize,
         face = 'plain',
+        family = "serif",
         vjust = 1),
       plot.caption = element_text(
         angle = 0,
         size = captionLabSize,
         face = 'plain',
+        family = "serif",
         vjust = 1),
 
       # axis text
       axis.text.x = element_text(
         angle = 0,
         size = axisLabSize,
+        family = "serif",
         vjust = 1),
       axis.text.y = element_text(
         angle = 0,
         size = axisLabSize,
+        family = "serif",
         vjust = 0.5),
       axis.title = element_text(
+        family = "serif",
         size = axisLabSize),
 
       # legend
@@ -386,8 +392,10 @@ EnhancedVolcano <- function(
       legend.key = element_blank(),
       legend.key.size = unit(0.5, 'cm'),
       legend.text = element_text(
+        family = "serif",
         size = legendLabSize),
       title = element_text(
+        family = "serif",
         size = legendLabSize),
       legend.title = element_blank())
 
